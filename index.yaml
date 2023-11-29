@@ -1,36 +1,43 @@
 apiVersion: v1
 entries:
+  app1:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-29T10:02:47.427824311Z"
+    description: A Helm chart for Kubernetes
+    digest: 2d43f9843a0df00130af6c5d18873a5dc896fe83392ab20cdc44cb19e1fddeb8
+    name: app1
+    type: application
+    urls:
+    - charts/app1-0.1.0.tgz
+    version: 0.1.0
+  app2:
+  - apiVersion: v2
+    appVersion: 1.16.0
+    created: "2023-11-29T10:02:47.428457404Z"
+    description: A Helm chart for Kubernetes
+    digest: dd8c3050eb7adf51c1fc3a49cdef951f7ecb26fff32a95d20e254b624a23af3c
+    name: app2
+    type: application
+    urls:
+    - charts/app2-0.1.0.tgz
+    version: 0.1.0
   test-helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-27T13:35:22.018607689Z"
+    created: "2023-11-29T10:02:47.427208746Z"
+    dependencies:
+    - name: app1
+      repository: file://charts/app1/
+      version: 0.1.0
+    - name: app2
+      repository: file://charts/app2/
+      version: 0.1.0
     description: A Helm chart for Kubernetes
-    digest: 5137951ae655b1532d5e2b5dcc84682e0da60975a249308380f7f02f26f65080
+    digest: dfaafd15b6a9fb91f58fd2ba90a9fee2a3d709702d941616fc5a4b02edfd97fb
     name: test-helm
     type: application
     urls:
     - test-helm-0.1.0.tgz
     version: 0.1.0
-  test-helm-app1:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-11-27T13:35:22.018824705Z"
-    description: A Helm chart for Kubernetes
-    digest: e1424bb5b98ff3d9f26ee066e6a89f299aef58f8e78eb5114c2c52a3e76748e0
-    name: test-helm-app1
-    type: application
-    urls:
-    - charts/test-helm-app1-0.1.0.tgz
-    version: 0.1.0
-  test-helm-app2:
-  - apiVersion: v2
-    appVersion: 1.16.0
-    created: "2023-11-27T13:35:22.019045808Z"
-    description: A Helm chart for Kubernetes
-    digest: 02840a3406ba9c935ed19494fd38085aa223e169d4a01e4f0bc32a6acdf1c749
-    name: test-helm-app2
-    type: application
-    urls:
-    - charts/test-helm-app2-0.1.0.tgz
-    version: 0.1.0
-generated: "2023-11-27T13:35:22.017748872Z"
+generated: "2023-11-29T10:02:47.424196912Z"
