@@ -1,0 +1,16 @@
+# global:
+#   postgresql:  
+#     enabled: true
+#     storage:
+#       size: 1Gi
+#       storageClass: cstor-csi-disk 
+#     auth:
+#       postgresUser: saam
+#       postgresPassword: saampass
+#     env:
+#       - name: POSTGRES_DB
+#         value: mydatabase
+#       - name: POSTGRES_USER
+#         value: saam
+#       - name: POSTGRES_PASSWORD
+#         value: saampass

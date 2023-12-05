@@ -1,5 +1,0 @@
-globals:
-  test-helm-app1:
-    enabled: true
-  test-helm-app2:
-    enabled: true

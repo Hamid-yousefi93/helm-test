@@ -3,9 +3,9 @@ entries:
   app1:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-29T10:02:47.427824311Z"
+    created: "2023-12-04T09:51:12.554642253Z"
     description: A Helm chart for Kubernetes
-    digest: 2d43f9843a0df00130af6c5d18873a5dc896fe83392ab20cdc44cb19e1fddeb8
+    digest: 052075f80f8226fe136c24a5c9a775ea16d551891f46b012c6ddf89653581b28
     name: app1
     type: application
     urls:
@@ -14,18 +14,54 @@ entries:
   app2:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-29T10:02:47.428457404Z"
+    created: "2023-12-04T09:51:12.554829748Z"
     description: A Helm chart for Kubernetes
-    digest: dd8c3050eb7adf51c1fc3a49cdef951f7ecb26fff32a95d20e254b624a23af3c
+    digest: c00a8e25a07215b4e2689d231fe87287d9534d7d7df98a35d9a9bd35e68a93a5
     name: app2
     type: application
     urls:
     - charts/app2-0.1.0.tgz
     version: 0.1.0
+  postgresql:
+  - annotations:
+      category: Database
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 15.2.0
+    created: "2023-12-04T09:51:12.564961954Z"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: PostgreSQL (Postgres) is an open source object-relational database
+      known for reliability and data integrity. ACID-compliant, it supports foreign
+      keys, joins, views, triggers and stored procedures.
+    digest: dd73216f840fdd26e11944d18793b9468355b97be2f2433fc9a6ae458a6cf916
+    home: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+    icon: https://bitnami.com/assets/stacks/postgresql/img/postgresql-stack-220x234.png
+    keywords:
+    - postgresql
+    - postgres
+    - database
+    - sql
+    - replication
+    - cluster
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    name: postgresql
+    sources:
+    - https://github.com/bitnami/containers/tree/main/bitnami/postgresql
+    - https://www.postgresql.org/
+    urls:
+    - charts/postgresql-12.2.0.tgz
+    version: 12.2.0
   test-helm:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2023-11-29T10:02:47.427208746Z"
+    created: "2023-12-04T09:51:12.554403012Z"
     dependencies:
     - name: app1
       repository: file://charts/app1/
@@ -33,11 +69,14 @@ entries:
     - name: app2
       repository: file://charts/app2/
       version: 0.1.0
+    - name: postgresql
+      repository: https://charts.bitnami.com/bitnami
+      version: 12.2.0
     description: A Helm chart for Kubernetes
-    digest: dfaafd15b6a9fb91f58fd2ba90a9fee2a3d709702d941616fc5a4b02edfd97fb
+    digest: 63661a4714ab0c402aba18712d1fcbe56c1fe8c7941c2b96bd3a11a44675b274
     name: test-helm
     type: application
     urls:
     - test-helm-0.1.0.tgz
     version: 0.1.0
-generated: "2023-11-29T10:02:47.424196912Z"
+generated: "2023-12-04T09:51:12.544807357Z"

@@ -5,5 +5,8 @@ dependencies:
 - name: app2
   repository: file://charts/app2/
   version: 0.1.0
-digest: sha256:7efa04308db71f1b2dc6d8f3b87c533618b7d751ca206cf0e1fba698c31c3489
-generated: "2023-11-29T09:56:24.556337039Z"
+- name: postgresql
+  repository: file://charts/postgresql/
+  version: 12.2.0
+digest: sha256:00c768986cc4aa1d1a772b21c65e9fac4e32753a4378b7015c0251239b1f58c3
+generated: "2023-12-04T13:10:03.718345159Z"
